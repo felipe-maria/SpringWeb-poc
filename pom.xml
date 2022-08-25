@@ -15,6 +15,7 @@
 	<description>Projeto para alunos torna-se um programador</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<flyway-maven-plugin.version>9.1.6</flyway-maven-plugin.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,7 +32,6 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.30</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,6 +50,11 @@
 			<artifactId>thymeleaf-spring5</artifactId>
 			<version>3.0.15.RELEASE</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-mysql</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -57,6 +62,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>${flyway-maven-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</build>
